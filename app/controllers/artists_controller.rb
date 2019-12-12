@@ -4,7 +4,7 @@ class ArtistsController < ApplicationController
   end
 
   def show
-    @artist = Artist.find(params[:id])
+    @artist = Artist.find_by(id: params[:id])
   end
 
   def new
@@ -22,7 +22,7 @@ class ArtistsController < ApplicationController
   end
 
   def update
-    @artist = Artist.find(params[:id])
+    @artist = Artist.find_by(id: params[:id])
     @artist.update(params.require(:artist).permit(:name, :bio))
     redirect_to artist_path(@artist)
   end
