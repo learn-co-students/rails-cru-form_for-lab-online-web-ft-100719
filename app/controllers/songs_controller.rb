@@ -11,6 +11,7 @@ class SongsController < ApplicationController
 
   def show
     @song = Song.find_by(params[:id])
+    @genre = Song.find_by(params[:genre_id])
   end
 
   def edit
