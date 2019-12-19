@@ -11,7 +11,6 @@ class SongsController < ApplicationController
 
   def show
     @song = Song.find_by(params[:id])
-    @genre = Song.find_by(params[:genre_id])
   end
 
   def edit
@@ -23,6 +22,10 @@ class SongsController < ApplicationController
       @song.update(song_params)
       redirect_to song_path(@song) 
   end 
+
+  def index
+    @songs = Song.all
+  end
 
   private
 
