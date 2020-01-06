@@ -58,3 +58,13 @@ table "songs"
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/rails-cru-form_for-lab' title='CRU with form_for Lab'>CRU with form_for Lab</a> on Learn.co and start learning to code for free.</p>
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/rails-cru-form_for-lab'>CRU Rails Lab </a> on Learn.co and start learning to code for free.</p>
+
+Artist.create(name: "first name", bio: "some stuff")
+Artist.create(name: "second name", bio: "some other stuff")
+Artist.create(name: "third name name", bio: "some more stuff")
+Genre.create(name: "a genre")
+Genre.create(name: "another genre")
+Genre.create(name: "this genre")
+Song.create(name: "a song", artist_id: "3", genre_id: "1")
+Song.create(name: "another song", artist_id: "2", genre_id: "2")
+Song.create(name: "this song", artist_id: "1", genre_id: "3")
